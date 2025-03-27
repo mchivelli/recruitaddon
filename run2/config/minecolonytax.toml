@@ -1,0 +1,316 @@
+#Optional debt limit for colony debt. If > 0, colony revenue will not deduct more once the debt reaches this limit (i.e. the tax value won’t drop below -DebtLimit). Set to 0 to disable.
+#Range: > 0
+DebtLimit = 0
+
+["Building Taxes"]
+	#Base tax for Fletcher
+	#Range: 0.0 ~ 1.7976931348623157E308
+	fletcher = 9.0
+	#Tax increase per level for Alchemist
+	#Range: 0.0 ~ 1.7976931348623157E308
+	alchemistUpgrade = 5.0
+	#Tax increase per level for Warehouse
+	#Range: 0.0 ~ 1.7976931348623157E308
+	warehouseUpgrade = 4.0
+	#Base tax for Mechanic
+	#Range: 0.0 ~ 1.7976931348623157E308
+	mechanic = 11.0
+	#Tax increase per level for Builder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	builderUpgrade = 4.0
+	#Base tax for Enchanter
+	#Range: 0.0 ~ 1.7976931348623157E308
+	enchanter = 15.0
+	#Tax increase per level for Swine Herder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	swineherderUpgrade = 4.0
+	#Tax increase per level for Town Hall
+	#Range: 0.0 ~ 1.7976931348623157E308
+	townhallUpgrade = 8.0
+	#Tax increase per level for Enchanter
+	#Range: 0.0 ~ 1.7976931348623157E308
+	enchanterUpgrade = 5.0
+	#Base tax for Blacksmith
+	#Range: 0.0 ~ 1.7976931348623157E308
+	blacksmith = 18.0
+	#Base tax for Graveyard
+	#Range: 0.0 ~ 1.7976931348623157E308
+	graveyard = 7.0
+	#Tax increase per level for Stonemason
+	#Range: 0.0 ~ 1.7976931348623157E308
+	stonemasonUpgrade = 4.0
+	#Tax increase per level for Residence
+	#Range: 0.0 ~ 1.7976931348623157E308
+	homeUpgrade = 2.0
+	#Base tax for Tavern
+	#Range: 0.0 ~ 1.7976931348623157E308
+	tavern = 14.0
+	#Base tax for Florist
+	#Range: 0.0 ~ 1.7976931348623157E308
+	florist = 8.0
+	#Base tax for Swine Herder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	swineherder = 10.0
+	#Base tax for Composter
+	#Range: 0.0 ~ 1.7976931348623157E308
+	composter = 6.0
+	#Base tax for Crusher
+	#Range: 0.0 ~ 1.7976931348623157E308
+	crusher = 13.0
+	#Tax increase per level for Composter
+	#Range: 0.0 ~ 1.7976931348623157E308
+	composterUpgrade = 2.0
+	#Base tax for Alchemist
+	#Range: 0.0 ~ 1.7976931348623157E308
+	alchemist = 12.0
+	#Base tax for Cowboy
+	#Range: 0.0 ~ 1.7976931348623157E308
+	cowboy = 9.0
+	#Base tax for Bakery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	bakery = 10.0
+	#Tax increase per level for Miner
+	#Range: 0.0 ~ 1.7976931348623157E308
+	minerUpgrade = 5.0
+	#Base tax for Warehouse
+	#Range: 0.0 ~ 1.7976931348623157E308
+	warehouse = 10.0
+	#Base tax for Dyer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	dyer = 9.0
+	#Base tax for Stonemason
+	#Range: 0.0 ~ 1.7976931348623157E308
+	stonemason = 12.0
+	#Base tax for Concrete Mixer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	concretemixer = 10.0
+	#Base tax for Rabbit Hutch
+	#Range: 0.0 ~ 1.7976931348623157E308
+	rabbithutch = 8.0
+	#Tax increase per level for Rabbit Hutch
+	#Range: 0.0 ~ 1.7976931348623157E308
+	rabbithutchUpgrade = 2.0
+	#Tax increase per level for Cook
+	#Range: 0.0 ~ 1.7976931348623157E308
+	cookUpgrade = 5.0
+	#Tax increase per level for Glassblower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	glassblowerUpgrade = 3.0
+	#Tax increase per level for Chicken Herder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	chickenherderUpgrade = 3.0
+	#Tax increase per level for Library
+	#Range: 0.0 ~ 1.7976931348623157E308
+	libraryUpgrade = 6.0
+	#Base tax for Nether Worker
+	#Range: 0.0 ~ 1.7976931348623157E308
+	netherworker = 15.0
+	#Base tax for Sawmill
+	#Range: 0.0 ~ 1.7976931348623157E308
+	sawmill = 10.0
+	#Base tax for Warehouse Deliveryman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	warehousedeliveryman = 12.0
+	#Base tax for Glassblower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	glassblower = 10.0
+	#Tax increase per level for Shepherd
+	#Range: 0.0 ~ 1.7976931348623157E308
+	shepherdUpgrade = 3.0
+	#Tax increase per level for University
+	#Range: 0.0 ~ 1.7976931348623157E308
+	universityUpgrade = 10.0
+	#Tax increase per level for Florist
+	#Range: 0.0 ~ 1.7976931348623157E308
+	floristUpgrade = 2.0
+	#Tax increase per level for Crusher
+	#Range: 0.0 ~ 1.7976931348623157E308
+	crusherUpgrade = 6.0
+	#Base tax for University
+	#Range: 0.0 ~ 1.7976931348623157E308
+	university = 20.0
+	#Base tax for Beekeeper
+	#Range: 0.0 ~ 1.7976931348623157E308
+	beekeeper = 9.0
+	#Base tax for Smeltery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	smeltery = 15.0
+	#Tax increase per level for Plantation
+	#Range: 0.0 ~ 1.7976931348623157E308
+	plantationUpgrade = 4.0
+	#Base tax for Shepherd
+	#Range: 0.0 ~ 1.7976931348623157E308
+	shepherd = 9.0
+	#Base tax for Miner
+	#Range: 0.0 ~ 1.7976931348623157E308
+	miner = 11.0
+	#Tax increase per level for Cowboy
+	#Range: 0.0 ~ 1.7976931348623157E308
+	cowboyUpgrade = 4.0
+	#Tax increase per level for Lumberjack
+	#Range: 0.0 ~ 1.7976931348623157E308
+	lumberjackUpgrade = 5.0
+	#Base tax for Library
+	#Range: 0.0 ~ 1.7976931348623157E308
+	library = 13.0
+	#Base tax for Plantation
+	#Range: 0.0 ~ 1.7976931348623157E308
+	plantation = 12.0
+	#Tax increase per level for Hospital
+	#Range: 0.0 ~ 1.7976931348623157E308
+	hospitalUpgrade = 8.0
+	#Base tax for Builder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	builder = 8.0
+	#Tax increase per level for Deliveryman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	deliverymanUpgrade = 5.0
+	#Tax increase per level for Tavern
+	#Range: 0.0 ~ 1.7976931348623157E308
+	tavernUpgrade = 6.0
+	#Base tax for Hospital
+	#Range: 0.0 ~ 1.7976931348623157E308
+	hospital = 20.0
+	#Tax increase per level for Beekeeper
+	#Range: 0.0 ~ 1.7976931348623157E308
+	beekeeperUpgrade = 3.0
+	#Base tax for Town Hall
+	#Range: 0.0 ~ 1.7976931348623157E308
+	townhall = 20.0
+	#Tax increase per level for Nether Worker
+	#Range: 0.0 ~ 1.7976931348623157E308
+	netherworkerUpgrade = 6.0
+	#Base tax for Cook
+	#Range: 0.0 ~ 1.7976931348623157E308
+	cook = 12.0
+	#Base tax for Deliveryman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	deliveryman = 12.0
+	#Tax increase per level for Mechanic
+	#Range: 0.0 ~ 1.7976931348623157E308
+	mechanicUpgrade = 4.0
+	#Tax increase per level for Fisherman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	fishermanUpgrade = 4.0
+	#Tax increase per level for Graveyard
+	#Range: 0.0 ~ 1.7976931348623157E308
+	graveyardUpgrade = 2.0
+	#Tax increase per level for Farmer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	farmerUpgrade = 5.0
+	#Tax increase per level for Blacksmith
+	#Range: 0.0 ~ 1.7976931348623157E308
+	blacksmithUpgrade = 8.0
+	#Base tax for Residence
+	#Range: 0.0 ~ 1.7976931348623157E308
+	home = 5.0
+	#Base tax for Chicken Herder
+	#Range: 0.0 ~ 1.7976931348623157E308
+	chickenherder = 9.0
+	#Tax increase per level for Smeltery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	smelteryUpgrade = 6.0
+	#Tax increase per level for Warehouse Deliveryman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	warehousedeliverymanUpgrade = 5.0
+	#Tax increase per level for Concrete Mixer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	concretemixerUpgrade = 4.0
+	#Base tax for Farmer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	farmer = 11.0
+	#Tax increase per level for Dyer
+	#Range: 0.0 ~ 1.7976931348623157E308
+	dyerUpgrade = 3.0
+	#Base tax for Lumberjack
+	#Range: 0.0 ~ 1.7976931348623157E308
+	lumberjack = 11.0
+	#Tax increase per level for Bakery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	bakeryUpgrade = 4.0
+	#Base tax for Fisherman
+	#Range: 0.0 ~ 1.7976931348623157E308
+	fisherman = 10.0
+	#Tax increase per level for Fletcher
+	#Range: 0.0 ~ 1.7976931348623157E308
+	fletcherUpgrade = 3.0
+	#Tax increase per level for Sawmill
+	#Range: 0.0 ~ 1.7976931348623157E308
+	sawmillUpgrade = 3.0
+
+[General]
+	#Tax generation interval in minutes
+	#Range: 1 ~ 1440
+	TaxIntervalMinutes = 60
+	#Maximum tax revenue a colony can store before it stops generating further taxes
+	#Range: > 1
+	MaxTaxRevenue = 5000
+	#Enable SDMShop conversion (true = enable, false = disable).
+	EnableSDMShopConversion = true
+	#The item name for the custom currency (e.g., 'minecraft:emerald').
+	CurrencyItemName = "minecraft:emerald"
+
+["War Settings"]
+	#Grace period between declaring wars (minutes)
+	#Range: 1 ~ 1440
+	AttackerGracePeriodMinutes = 120
+	#Grace period between raids (minutes)
+	#Range: 1 ~ 1440
+	RaidGracePeriodMinutes = 1
+	#Maximum raid duration (minutes)
+	#Range: 1 ~ 1440
+	MaxRaidDurationMinutes = 20
+	#Allow players to raid colonies even if the colony owner is offline.
+	AllowOfflineRaids = true
+	#Penalty percentage applied when a raider is killed by a defender during a raid (0.0 - 1.0)
+	#Range: 0.0 ~ 1.0
+	RaidPenaltyPercentage = 0.25
+	#Interval between tax transfers during raids (seconds)
+	#Range: 5 ~ 3600
+	RaidTaxIntervalSeconds = 10
+	#Tax transfer percentages during raids (comma-separated decimals)
+	RaidTaxPercentages = [0.1, 0.3, 0.5, 0.7]
+	#War duration (minutes)
+	#Range: 1 ~ 1440
+	WarDurationMinutes = 120
+	#Minimum guards required to declare war
+	#Range: 1 ~ 100
+	MinGuardsToWageWar = 5
+	#Duration of the join phase in minutes
+	#Range: 1 ~ 30
+	JoinPhaseDurationMinutes = 5
+	#If true, war requests must be accepted manually; if false, wars are auto-started if conditions are met.
+	WarAcceptanceRequired = true
+
+["Military Maintenance Costs"]
+	#Base maintenance cost per hour for Barracks
+	#Range: 0.0 ~ 1.7976931348623157E308
+	barracksMaintenance = 15.0
+	#Additional maintenance per level for Barracks
+	#Range: 0.0 ~ 1.7976931348623157E308
+	barracksMaintenanceUpgrade = 5.0
+	#Base maintenance cost per hour for Guard Tower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	guardtowerMaintenance = 10.0
+	#Additional maintenance per level for Guard Tower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	guardtowerMaintenanceUpgrade = 3.0
+	#Base maintenance cost per hour for Barracks Tower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	barrackstowerMaintenance = 14.0
+	#Additional maintenance per level for Barracks Tower
+	#Range: 0.0 ~ 1.7976931348623157E308
+	barrackstowerMaintenanceUpgrade = 6.0
+	#Base tax for Archery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	archeryMaintenance = 12.0
+	#Base maintenance cost per hour for Archery
+	#Range: 0.0 ~ 1.7976931348623157E308
+	archeryMaintenanceUpgrade = 6.0
+	#Base maintenance cost per hour for Combat Academy
+	#Range: 0.0 ~ 1.7976931348623157E308
+	combatacademyMaintenance = 14.0
+	#Additional maintenance per level for Combat Academy
+	#Range: 0.0 ~ 1.7976931348623157E308
+	combatacademyMaintenanceUpgrade = 6.0
+
