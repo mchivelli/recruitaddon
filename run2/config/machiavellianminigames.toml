@@ -1,0 +1,42 @@
+
+[General]
+	#Enable debug logging for troubleshooting
+	enableDebugLogging = false
+	#Maximum players per team (0 = unlimited)
+	#Range: 0 ~ 100
+	maxPlayersPerTeam = 0
+	#Allow team members to damage each other
+	enableFriendlyFire = false
+
+[StormTheFront]
+	#Default game duration in seconds (min: 300, max: 7200)
+	#Range: 300 ~ 7200
+	duration = 1800
+	#Resource distribution interval in seconds
+	#Range: 10 ~ 300
+	resourceInterval = 60
+	#Item to use as money resource
+	moneyItem = "minecraft:diamond"
+	#Item to use as upgrade resource
+	upgradeItem = "minecraft:emerald"
+	#Time required to claim a checkpoint in seconds
+	#Range: 5 ~ 60
+	claimTime = 10
+	#Time before checkpoint progress resets when left alone
+	#Range: 1 ~ 30
+	resetTimer = 3
+
+[ResourceDistribution]
+	#Amount of money items to give per resource distribution
+	#Range: 1 ~ 64
+	moneyAmount = 1
+	#Amount of upgrade items to give per resource distribution
+	#Range: 1 ~ 64
+	upgradeAmount = 1
+	#Money resource distribution interval in seconds
+	#Range: 5 ~ 300
+	moneyInterval = 30
+	#Upgrade resource distribution interval in seconds
+	#Range: 5 ~ 600
+	upgradeInterval = 45
+
