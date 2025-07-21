@@ -1,0 +1,40 @@
+
+["Raid Behavior"]
+	#Enable notifications for raid events
+	enableRaidNotifications = true
+	#Range in blocks for raid notifications
+	#Range: 10 ~ 500
+	notificationRange = 100
+	#Distance in blocks to consider destination reached
+	#Range: 1 ~ 20
+	destinationReachDistance = 5
+
+["Entity Blacklist"]
+	#List of entity types that recruits should not attack during raids
+	#Format: modid:entity_name (e.g., minecraft:creeper, minecraft:villager)
+	raidEntityBlacklist = ["minecraft:creeper", "minecraft:villager", "minecraft:iron_golem", "minecraft:cat", "minecraft:wolf"]
+	#Prevent recruits from attacking creepers (to avoid explosions)
+	blacklistCreepers = true
+	#Prevent recruits from attacking endermen (to avoid teleportation issues)
+	blacklistEndermen = true
+	#Prevent recruits from attacking villagers and other peaceful NPCs
+	blacklistVillagers = true
+
+[Notifications]
+	#Notify player when recruits reach their destination
+	notifyOnDestinationReached = true
+	#Notify player when recruits start combat
+	notifyOnCombatStart = true
+	#Notify player when recruits appear to be stuck
+	notifyOnRecruitStuck = true
+	#Notify player when a recruit dies
+	notifyOnRecruitDeath = true
+
+[Commands]
+	#Maximum distance to target player for attack command (in blocks)
+	#Range: 10 ~ 500
+	attackCommandMaxDistance = 125
+	#Minimum distance required for follow command (in blocks)
+	#Range: 5 ~ 200
+	followCommandMinDistance = 50
+

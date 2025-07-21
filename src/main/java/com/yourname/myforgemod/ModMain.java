@@ -1,51 +1,81 @@
 package com.yourname.myforgemod;
 
+import com.yourname.myforgemod.client.ClientSetup;
+import com.yourname.myforgemod.commands.MarchCommands;
+import com.yourname.myforgemod.commands.RaidCommands;
+import com.yourname.myforgemod.commands.RecruitMovementCommands;
+import com.yourname.myforgemod.commands.SimpleRecruitsCommands;
+import com.yourname.myforgemod.commands.WorkingRecruitsCommands;
+import com.yourname.myforgemod.commands.OfficialStyleCommands;
+import com.yourname.myforgemod.network.NetworkHandler;
+import com.yourname.myforgemod.raid.RaidManager;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /* [Guide: ModMain.java is the entry point of your Forge mod.
    - The @Mod annotation registers this class with Forge using the unique mod ID "examplemod".
    - The constructor sets up the mod by registering items, blocks, tile entities, and configuration.
    - It also adds event listeners for both common (server and client) and client-specific setup.
-   - Use this file to initialize your mod’s core functionality without modifying the critical steps.
+   - Use this file to initialize your mod's core functionality without modifying the critical steps.
 ] */
 @Mod(ModMain.MODID)
 public class ModMain {
 
-  public static final String MODID = "myforgemod"; // [Guide: Unique identifier for your mod; must be all lowercase.]
-  public static final Logger LOGGER = LogManager.getLogger(); // [Guide: Logger for outputting debug/info messages.]
+  public static final String MODID = "recruitsraid"; // Changed to match mods.toml
+  public static final Logger LOGGER = LogManager.getLogger();
 
   public ModMain() {
     // [Guide: Retrieve the mod event bus for registering events during mod loading.]
-    IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-    // [Guide: Register your mod’s blocks, items, and tile entities so they are initialized correctly.]
-    ModRegistry.BLOCKS.register(eventBus);
-    ModRegistry.ITEMS.register(eventBus);
-    ModRegistry.TILE_ENTITIES.register(eventBus);
+    // [Guide: Register your mod's blocks, items, and tile entities so they are initialized correctly.]
+    // ItemInit.ITEMS.register(modEventBus);
+
     // [Guide: Initialize the configuration settings for your mod.]
     new ConfigManager();
+
     // [Guide: Add listeners for common and client-specific setup events.]
-    FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-    FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
+    modEventBus.addListener(this::commonSetup);
+    DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modEventBus.addListener(ClientSetup::init));
+
+    // Register ourselves for server and other game events we are interested in
+    MinecraftForge.EVENT_BUS.register(this);
+    MinecraftForge.EVENT_BUS.register(RaidManager.class);
+    MinecraftForge.EVENT_BUS.register(com.yourname.myforgemod.raid.AdvancedRaidManager.class);
+    
+    // Register configuration
+    com.yourname.myforgemod.config.RaidConfig.register();
   }
 
-  private void setup(final FMLCommonSetupEvent event) {
+  private void commonSetup(final FMLCommonSetupEvent event) {
     // [Guide: Common setup method. Use this to initialize logic that should run on both client and server.]
-    //    MinecraftForge.EVENT_BUS.register(new WhateverEvents());
+    LOGGER.info("Enhanced March Mod setup.");
+    
+    // Initialize network handler
+    event.enqueueWork(() -> {
+      NetworkHandler.registerMessages();
+    });
   }
 
-  private void setupClient(final FMLClientSetupEvent event) {
-    // [Guide: Client-only setup method. Use this for client-specific initialization like rendering registration.]
-    //for client side only setup
+  @SubscribeEvent
+  public void onRegisterCommands(RegisterCommandsEvent event) {
+    // Disabled conflicting command registrations - using only SimpleRecruitsCommands
+    // RaidCommands.register(event.getDispatcher());
+    // MarchCommands.register(event.getDispatcher());
+    // RecruitMovementCommands.register(event.getDispatcher());
+    SimpleRecruitsCommands.register(event.getDispatcher());
+    WorkingRecruitsCommands.register(event.getDispatcher()); // NEW WORKING IMPLEMENTATION FOR TESTING
+    OfficialStyleCommands.register(event.getDispatcher()); // OFFICIAL-STYLE RECRUIT DISCOVERY TESTING
   }
 
   /**
@@ -53,26 +83,9 @@ public class ModMain {
    */
   @SubscribeEvent
   public void onServerStarting(ServerStartingEvent event) {
-    LOGGER.info("Server starting: Initializing Mod");
+    // Do something when the server starts
+    LOGGER.info("Enhanced March Mod is ready.");
     // Initialize Mod Systems
     //TaxManager.initialize(event.getServer());
   }
-
-  /**
-   * Registers commands for the mod
-   */
-  @SubscribeEvent
-  public void onRegisterCommands(RegisterCommandsEvent event) {
-
-    /**
-     *     WarCommands.register(event.getDispatcher()); // Register the PvP command
-     *     LOGGER.info("MineColonyTax: PvP command registered.");
-     *     ClaimTaxCommand.register(event.getDispatcher()); // Register the Claim Tax command
-     *     CheckTaxRevenueCommand.register(event.getDispatcher()); // Register the Check Tax Revenue command
-     *     LOGGER.info("MineColonyTax: Commands registered.");
-     *     loadArenaPositions();
-     */
-
-  }
-  
 }
