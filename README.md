@@ -248,7 +248,7 @@ entityBlacklist = [
 
 Enable debug logging in your `log4j2.xml`:
 ```xml
-<Logger level="debug" name="com.yourname.myforgemod"/>
+<Logger level="debug" name="com.mchivellian.recruitsaddon"/>
 ```
 
 ## 🤝 Compatibility
