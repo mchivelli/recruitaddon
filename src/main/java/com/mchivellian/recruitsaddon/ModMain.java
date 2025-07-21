@@ -42,7 +42,7 @@ public class ModMain {
     // ItemInit.ITEMS.register(modEventBus);
 
     // [Guide: Initialize the configuration settings for your mod.]
-    new ConfigManager();
+    // new ConfigManager(); // DISABLED: Using RaidConfig instead to prevent duplicate config files
 
     // [Guide: Add listeners for common and client-specific setup events.]
     modEventBus.addListener(this::commonSetup);
