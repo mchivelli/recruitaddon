@@ -63,6 +63,9 @@ minecraft {
         configureEach {
             workingDirectory project.file('run')
 
+            // Limit memory to 8GB
+            jvmArgs('-Xmx8G', '-Xms1G')
+            
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.
             // "SCAN": For mods scan.
